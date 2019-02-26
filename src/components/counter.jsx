@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0
+    value: this.props.value
     //tags: ["tag1", "tag2", "tag3"]
   };
   //State stored as a seperate variable
@@ -39,7 +39,7 @@ class Counter extends Component {
   }
 */
   handleIncrement = () => {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ count: this.state.value + 1 });
   };
 
   //Conditional Rendering
@@ -58,13 +58,13 @@ class Counter extends Component {
   //Dynamically renderd css
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
-    classes += this.state.count === 0 ? "warning" : "primary";
+    classes += this.state.value === 0 ? "warning" : "primary";
     return classes;
   }
 
   formatCount() {
     // changing state attribute
-    const { count } = this.state;
+    const { value: count } = this.state;
     return count === 0 ? "zero" : count;
   }
 }

@@ -2,14 +2,16 @@ import React from "react";
 
 //Stateless Functional Component
 
-const NavBar = props => {
+// Object destructuring allows for pulling specific props
+const NavBar = ({ totalCounters }) => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <a href="#" className="navbar-brand">
+      <a href="https://github.com/OEMarshall" className="navbar-brand">
         Navbar{" "}
         <span className="badge badge-pill badge-secondary">
-          {/* Don't need to use `this` you can pull props directly*/}
-          {props.totalCounters}
+          {/* Makes code cleaner since you don't need `props.`
+                or `this.props` everywhere */}
+          {totalCounters}
         </span>
       </a>
     </nav>

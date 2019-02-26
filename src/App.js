@@ -1,11 +1,25 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 import Navbar from "./components/navbar";
 import Counters from "./components/counters";
 
 class App extends Component {
+  //Lifecycle Hooks - Mounting Phase
+
+  constructor(props) {
+    super(props);
+    console.log("App - Constructed");
+    //this.state = this.props.something;
+    // initialize props here
+  }
+
+  componentDidMount() {
+    //Ajax calls and DB Queries go here
+    console.log("App - Mounted");
+  }
+
   render() {
+    console.log("App - Rendered");
     return (
       <>
         {/* Step 5: Share the info as needed*/}

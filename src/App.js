@@ -18,6 +18,22 @@ class App extends Component {
     console.log("App - Mounted");
   }
 
+  //Lifecycle Hooks - Update
+  componentDidUpdate(prevProps, prevState) {
+    console.log("prevProps", prevProps);
+    console.log("prevState", prevState);
+
+    /*if (prevProps.counter.value !== this.props.counter.value) {
+      //Ajax call or get new data
+    } */
+  }
+
+  //Lifecycle Hooks - Unmount
+  componentWillUnmount() {
+    console.log("Counter - Unmount");
+    // Timers and listeners removed here
+  }
+
   render() {
     console.log("App - Rendered");
     return (

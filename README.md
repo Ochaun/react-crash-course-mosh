@@ -1,6 +1,6 @@
 # Intro
 
-This is a repo for the code written while following the (Mosh React Tutorial)[https://youtu.be/Ke90Tje7VS0]. Comments have been added to remind me of the essential components in react. Basic Build instructions are in the Default Readme below.
+This is a repo for the code written while following the [Mosh React Tutorial](https://youtu.be/Ke90Tje7VS0). Comments have been added to remind me of the essential components in react. Basic Build instructions are in the Default Readme below.
 
 # Default React App Readme
 

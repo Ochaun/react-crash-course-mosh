@@ -16,17 +16,20 @@ export default class counters extends Component {
     this.setState({ counters });
   };
 
+  handleReset = () => {
+    this.state.counters.map(c => {
+      c.value = 0;
+      return c;
+    });
+    this.setState({ counters });
+  };
+
   render() {
     return (
       <>
         {/* Map every element in array to a JSX obj with a key*/}
         {this.state.counters.map(counter => (
-          <Counter
-            key={counter.id}
-            id={counter.id}
-            onDelete={this.handleDelete}
-            value={counter.value}
-          />
+          <Counter key={counter.id} counter={counter} />
         ))}
       </>
     );

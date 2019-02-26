@@ -2,10 +2,8 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    value: this.props.value
-    //tags: ["tag1", "tag2", "tag3"]
+    value: this.props.counter.value
   };
-  //State stored as a seperate variable
 
   render() {
     return (
@@ -26,7 +24,13 @@ class Counter extends Component {
           Increment
         </button>
         <button
-          onClick={() => this.props.onDelete(this.props.id)}
+          onCLick={this.handleReset}
+          className="btn btn-primary btn-sm m-2"
+        >
+          Reset
+        </button>
+        <button
+          onClick={() => this.props.onDelete(this.props.counter.id)}
           className="btn btn-danger btn-sm m-2"
         >
           Delete
